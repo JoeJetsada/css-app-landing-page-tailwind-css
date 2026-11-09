@@ -7,16 +7,16 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-[#F6F6FB] text-gray-800 font-sans">
 
   <!-- Navbar -->
   <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
     <div class="text-xl font-bold tracking-tight">Acme<span class="text-indigo-600">*</span></div>
     <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-      <a href="#" class="text-indigo-600">Home</a>
-      <a href="#" class="hover:text-gray-900">Features</a>
-      <a href="#" class="hover:text-gray-900">Pricing</a>
-      <a href="#" class="hover:text-gray-900">Contact</a>
+      <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Home</a>
+      <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Features</a>
+      <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Pricing</a>
+      <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Contact</a>
     </nav>
   </header>
 
@@ -162,7 +162,7 @@
       - py-12       : padding บน-ล่าง 48px
       - shadow-sm   : เงาบางๆ ให้การ์ดดูลอยขึ้นเล็กน้อย
     -->
-    <section class="rounded-2xl bg-white px-6 py-12 shadow-sm">
+    <section class=" bg-white rounded-3xl px-6 py-12 shadow-sm">
 
       <!--
         หัวข้อ "Get in Touch"
@@ -172,7 +172,7 @@
         - font-bold   : ตัวหนา (font-weight: 700)
         - text-slate-900 : สีเทาเข้ม
       -->
-      <h1 class="mb-8 text-center text-3xl font-bold text-slate-900">
+      <h1 class="mb-8 text-center text-5xl font-bold text-[#1A1A2C]">
         Get in Touch
       </h1>
 
@@ -218,9 +218,9 @@
             id="name"
             type="text"
             placeholder="John Doe"
-            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
+            class="w-full rounded-lg border border-[#E0E0ED] hover:border-[#B5A9FF] bg-white px-3 py-2 text-sm
                    placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+                   focus:border-[#5E44FF] focus:outline-none focus:ring-2 focus:ring-slate-900/10"
           />
         </div>
 
@@ -234,9 +234,9 @@
             id="email"
             type="email"
             placeholder="john@example.com"
-            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
+            class="w-full rounded-lg border border-slate-200 hover:border-[#B5A9FF] bg-white px-3 py-2 text-sm
                    placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+                   focus:border-[#5E44FF] focus:outline-none focus:ring-2 focus:ring-slate-900/10"
           />
         </div>
 
@@ -253,9 +253,9 @@
             id="message"
             rows="4"
             placeholder="Your message..."
-            class="w-full resize rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
+            class="w-full resize rounded-lg border border-slate-200 hover:border-[#B5A9FF] bg-white px-3 py-2 text-sm
                    placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+                   focus:border-[#5E44FF] focus:outline-none focus:ring-2 focus:ring-slate-900/10"
           ></textarea>
         </div>
 
@@ -274,8 +274,8 @@
         -->
         <button
           type="submit"
-          class="mt-2 w-full rounded-xl bg-slate-900 py-3 text-xs font-semibold text-white
-                 transition hover:bg-slate-700"
+          class="mt-2 w-[187px] rounded-2xl bg-[#1A1A2C] py-4 px-9 text-xs font-semibold text-white
+                 hover:bg-[#5F5F76] focus:bg-[#35354D] focus:ring focus:ring-[#5F5F76] "
         >
           Submit
         </button>
