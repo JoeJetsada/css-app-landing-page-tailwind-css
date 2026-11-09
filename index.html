@@ -1,50 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev 1 - Nav Bar + Hero Section</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-white text-gray-800 font-sans">
-
-  <!-- Navbar -->
-  <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-    <div class="text-xl font-bold tracking-tight">Acme<span class="text-indigo-600">*</span></div>
-    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-      <a href="#" class="text-indigo-600">Home</a>
-      <a href="#" class="hover:text-gray-900">Features</a>
-      <a href="#" class="hover:text-gray-900">Pricing</a>
-      <a href="#" class="hover:text-gray-900">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="max-w-5xl mx-auto px-6 pt-12 pb-20 text-center flex flex-col items-center">
-    <!-- Rainbow Tag / Badge -->
-    <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold mb-6 shadow-sm">
-      <span>🌈</span>
-      <span>Acme Productivity App</span>
-    </div>
-
-    <!-- Main Heading -->
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-4">
-      Boost Your <span class="text-indigo-600">Productivity</span>
-    </h1>
-    
-    <!-- Subtitle -->
-    <p class="text-lg text-gray-600 mb-8 max-w-xl mx-auto">
-      Streamline your workflow with our all-in-one productivity app.
-    </p>
-    
-    <!-- CTA Button -->
-    <a href="#" class="inline-block bg-gray-900 text-white font-medium px-6 py-3 rounded-lg hover:bg-gray-800 transition">
-      Start Free Trial
-    </a>
-  </section>
-
-</body>
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -52,21 +7,77 @@
     <title>Acme App</title>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-white">
+  <body class="bg-[#F6F6FB] font-sans text-[#1A1A2C]">
     <!-- ==================== Section 1 ==================== -->
-    <!-- TODO: Section 1 - รอเพื่อนในกลุ่มทำส่วนนี้ -->
+    <!-- Nav + Hero -->
+    <header class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
+      <div class="text-xl font-bold tracking-tight">
+        Acme<span class="text-[#5E44FF]">*</span>
+      </div>
+      <nav class="hidden items-center gap-8 text-sm font-semibold md:flex">
+        <a
+          href="#"
+          class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+          >Home</a
+        >
+        <a
+          href="#"
+          class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+          >Features</a
+        >
+        <a
+          href="#"
+          class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+          >Pricing</a
+        >
+        <a
+          href="#"
+          class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+          >Contact</a
+        >
+      </nav>
+    </header>
+
+    <section
+      class="mx-auto flex max-w-5xl flex-col items-center px-6 pb-20 pt-12 text-center"
+    >
+      <div
+        class="mb-6 inline-flex items-center gap-1.5 rounded-full border border-indigo-100 bg-indigo-50 px-4 py-1.5 text-xs font-semibold text-indigo-600 shadow-sm"
+      >
+        <span>🌈</span>
+        <span>Acme Productivity App</span>
+      </div>
+
+      <h1
+        class="mb-4 text-4xl font-extrabold tracking-tight text-[#1A1A2C] md:text-6xl"
+      >
+        Boost Your <span class="text-[#5E44FF]">Productivity</span>
+      </h1>
+
+      <p class="mb-8 max-w-xl text-lg text-slate-500">
+        Streamline your workflow with our all-in-one productivity app.
+      </p>
+
+      <!-- Start Free Trial button: w-[187px] px-9 py-4 rounded-2xl -->
+      <a
+        href="#"
+        class="inline-flex w-[187px] items-center justify-center rounded-2xl bg-[#1A1A2C] px-9 py-4 text-white no-underline transition hover:bg-[#5F5F76] focus:bg-[#35354D] focus:outline-none focus:ring focus:ring-[#5F5F76]"
+      >
+        Start Free Trial
+      </a>
+    </section>
+    <!-- ==================== End Section 1 ==================== -->
 
     <!-- ==================== Section 2 ==================== -->
     <section class="px-4 py-12 sm:px-6 md:px-10 lg:px-16">
       <div
         class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-7"
       >
-        <!-- Card 1: Streamlined Workflows -->
+        <!-- Card 1 -->
         <article class="rounded-[28px] bg-[#D8E5F6] p-8 md:p-10">
           <div
             class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
           >
-            <!-- Rocket icon (Font Awesome style) -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
@@ -79,7 +90,7 @@
             </svg>
           </div>
           <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">
-            Streamlined  Workflows
+            Streamlined Workflows
           </h3>
           <p class="text-base leading-relaxed text-slate-500">
             Automate repetitive tasks and focus on high-impact work with our
@@ -87,12 +98,11 @@
           </p>
         </article>
 
-        <!-- Card 2: Blazing Fast Performance -->
+        <!-- Card 2 -->
         <article class="rounded-[28px] bg-[#D9E0FC] p-8 md:p-10">
           <div
             class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
           >
-            <!-- Presentation chart line icon -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -115,12 +125,11 @@
           </p>
         </article>
 
-        <!-- Card 3: Intuitive Interface -->
+        <!-- Card 3 -->
         <article class="rounded-[28px] bg-[#E6DCF5] p-8 md:p-10">
           <div
             class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
           >
-            <!-- Smile icon (filled) -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
@@ -137,182 +146,113 @@
           </h3>
           <p class="text-base leading-relaxed text-slate-500">
             Our user-friendly interface makes it easy for anyone to streamline
-            their workflow
+            their workflow.
           </p>
         </article>
       </div>
     </section>
-    
-<section>
+    <!-- ==================== End Section 2 ==================== -->
 
-  <!--
-    ตัวห่อเนื้อหาทั้งหมด (container)
-    - mx-auto   : margin ซ้าย-ขวาเป็น auto → จัดกึ่งกลางหน้า
-    - max-w-5xl : กว้างสูงสุด 64rem (1024px) จอใหญ่ก็ไม่กว้างเกินนี้
-    - px-6      : padding แนวนอน 24px (กันเนื้อหาชิดขอบจอมือถือ)
-    - py-10     : padding แนวตั้ง 40px
-  -->
-  <div class="mx-auto max-w-5xl px-6 py-10">
+    <!-- ==================== Section 3 ==================== -->
+    <!-- Form + Footer -->
+    <section class="px-4 py-12 sm:px-6 md:px-10 lg:px-16">
+      <div class="mx-auto max-w-[700px]">
+        <!-- Form: bg white, rounded-3xl -->
+        <div class="rounded-3xl bg-white px-6 py-12 sm:px-10 md:px-14">
+          <!-- Header: text-5xl, color #1A1A2C -->
+          <h2
+            class="mb-10 text-center text-5xl font-bold text-[#1A1A2C]"
+          >
+            Get in Touch
+          </h2>
 
-    <!--
-      ===== การ์ดฟอร์ม =====
-      - rounded-2xl : มุมโค้งมาก (16px)
-      - bg-white    : พื้นหลังสีขาว (ตัดกับพื้นเทาของ body)
-      - px-6        : padding ซ้าย-ขวา 24px
-      - py-12       : padding บน-ล่าง 48px
-      - shadow-sm   : เงาบางๆ ให้การ์ดดูลอยขึ้นเล็กน้อย
-    -->
-    <section class="rounded-2xl bg-white px-6 py-12 shadow-sm">
+          <form class="mx-auto flex w-full max-w-[589px] flex-col gap-5">
+            <!-- Name -->
+            <div>
+              <label
+                for="name"
+                class="mb-2 block text-base text-slate-600"
+                >Name</label
+              >
+              <!-- Input: border #E0E0ED, p-3, hover #B5A9FF, focus #5E44FF -->
+              <input
+                id="name"
+                type="text"
+                placeholder="Placeholder Text"
+                class="w-full rounded-full border border-[#E0E0ED] bg-white p-3 text-[#1A1A2C] outline-none transition placeholder:text-slate-300 hover:border-[#B5A9FF] focus:border-[#5E44FF]"
+              />
+            </div>
 
-      <!--
-        หัวข้อ "Get in Touch"
-        - mb-8        : margin ล่าง 32px (เว้นระยะจากฟอร์ม)
-        - text-center : จัดข้อความกึ่งกลาง
-        - text-3xl    : ขนาดตัวอักษร 30px
-        - font-bold   : ตัวหนา (font-weight: 700)
-        - text-slate-900 : สีเทาเข้ม
-      -->
-      <h1 class="mb-8 text-center text-3xl font-bold text-slate-900">
-        Get in Touch
-      </h1>
+            <!-- Email -->
+            <div>
+              <label
+                for="email"
+                class="mb-2 block text-base text-slate-600"
+                >Email</label
+              >
+              <input
+                id="email"
+                type="email"
+                placeholder="Placeholder Text"
+                class="w-full rounded-full border border-[#E0E0ED] bg-white p-3 text-[#1A1A2C] outline-none transition placeholder:text-slate-300 hover:border-[#B5A9FF] focus:border-[#5E44FF]"
+              />
+            </div>
 
-      <!--
-        ฟอร์ม
-        - mx-auto   : จัดฟอร์มให้อยู่กลางการ์ด
-        - flex      : เปิดใช้ Flexbox
-        - flex-col  : เรียงลูกจากบนลงล่าง (flex-direction: column)
-        - gap-4     : ระยะห่างระหว่างลูกแต่ละตัว 16px
-        - w-full    : กว้าง 100% ของ parent
-        - max-w-xs  : แต่ไม่เกิน 20rem (320px) → ฟอร์มจึงแคบอยู่กลางการ์ด
-      -->
-      <form class="mx-auto flex w-full max-w-xs flex-col gap-4">
+            <!-- Message -->
+            <div>
+              <label
+                for="message"
+                class="mb-2 block text-base text-slate-600"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="4"
+                placeholder="Placeholder Text"
+                class="w-full resize-y rounded-3xl border border-[#E0E0ED] bg-white p-3 text-[#1A1A2C] outline-none transition placeholder:text-slate-300 hover:border-[#B5A9FF] focus:border-[#5E44FF]"
+              ></textarea>
+            </div>
 
-        <!-- ===== ช่อง Name ===== -->
-        <div>
-          <!--
-            Label
-            - mb-1          : margin ล่าง 4px (ชิดช่อง input)
-            - block         : ให้เป็น block เพื่อขึ้นบรรทัดใหม่เหนือ input
-            - text-xs       : ตัวอักษร 12px
-            - text-slate-600: สีเทากลาง
-          -->
-          <label for="name" class="mb-1 block text-xs text-slate-600">Name</label>
-
-          <!--
-            Input (ใช้ชุดเดียวกันกับ Email และ Textarea)
-            - w-full                 : กว้างเต็มความกว้างของฟอร์ม
-            - rounded-lg             : มุมโค้ง 8px
-            - border                 : ใส่เส้นขอบหนา 1px
-            - border-slate-200       : สีของเส้นขอบ เทาอ่อน
-            - bg-white               : พื้นหลังขาว
-            - px-3                   : padding ซ้าย-ขวา 12px
-            - py-2                   : padding บน-ล่าง 8px
-            - text-sm                : ตัวอักษรที่พิมพ์ 14px
-            - placeholder:text-slate-400 : สีข้อความตัวอย่าง (placeholder) เทาอ่อน
-            - focus:border-slate-900 : ตอนคลิกเข้าช่อง ขอบเปลี่ยนเป็นสีเข้ม
-            - focus:outline-none     : ปิดเส้น outline เริ่มต้นของเบราว์เซอร์
-            - focus:ring-2           : ตอน focus ใส่วงแหวนรอบช่องหนา 2px
-            - focus:ring-slate-900/10: สีวงแหวน เทาเข้มโปร่งใส 10% (/10 = opacity)
-          -->
-          <input
-            id="name"
-            type="text"
-            placeholder="John Doe"
-            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
-                   placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-          />
+            <!-- Submit button: w-[589px] px-9 py-4 rounded-2xl -->
+            <button
+              type="submit"
+              class="mt-2 w-full max-w-[589px] rounded-2xl bg-[#1A1A2C] px-9 py-4 text-white transition hover:bg-[#5F5F76] focus:bg-[#35354D] focus:outline-none focus:ring focus:ring-[#5F5F76]"
+            >
+              Submit
+            </button>
+          </form>
         </div>
 
-        <!-- ===== ช่อง Email ===== -->
-        <div>
-          <!-- class ของ label เหมือนช่อง Name ด้านบน -->
-          <label for="email" class="mb-1 block text-xs text-slate-600">Email</label>
-
-          <!-- class ของ input เหมือนช่อง Name ด้านบน -->
-          <input
-            id="email"
-            type="email"
-            placeholder="john@example.com"
-            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
-                   placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-          />
-        </div>
-
-        <!-- ===== ช่อง Message ===== -->
-        <div>
-          <label for="message" class="mb-1 block text-xs text-slate-600">Message</label>
-
-          <!--
-            Textarea : ใช้ class เหมือน input ทุกตัว บวกเพิ่มอีก 1 ตัว
-            - resize : อนุญาตให้ผู้ใช้ลากมุมขวาล่างเพื่อปรับขนาดได้
-            (rows="4" เป็น attribute ของ HTML กำหนดความสูงเริ่มต้น 4 บรรทัด)
-          -->
-          <textarea
-            id="message"
-            rows="4"
-            placeholder="Your message..."
-            class="w-full resize rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
-                   placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
-          ></textarea>
-        </div>
-
-        <!--
-          ===== ปุ่ม Submit =====
-          - mt-2             : margin บน 8px (เพิ่มระยะจากช่อง Message)
-          - w-full           : กว้างเต็มฟอร์ม
-          - rounded-xl       : มุมโค้ง 12px
-          - bg-slate-900     : พื้นหลังสีกรมท่า/เทาเข้ม
-          - py-3             : padding บน-ล่าง 12px (กำหนดความสูงปุ่ม)
-          - text-xs          : ตัวอักษร 12px
-          - font-semibold    : หนาปานกลาง (600)
-          - text-white       : ตัวอักษรสีขาว
-          - transition       : ให้การเปลี่ยนสี/สถานะเคลื่อนไหวนุ่มนวล
-          - hover:bg-slate-700 : เมื่อเอาเมาส์ชี้ พื้นหลังเปลี่ยนเป็นสีอ่อนลง
-        -->
-        <button
-          type="submit"
-          class="mt-2 w-full rounded-xl bg-slate-900 py-3 text-xs font-semibold text-white
-                 transition hover:bg-slate-700"
+        <!-- Footer links -->
+        <footer
+          class="mt-10 flex flex-col items-center justify-between gap-4 text-sm text-slate-600 sm:flex-row"
         >
-          Submit
-        </button>
-      </form>
+          <p>Acme productivity app &copy;2024</p>
+          <nav class="flex flex-wrap justify-center gap-6 font-semibold">
+            <a
+              href="#"
+              class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+              >FAQ</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+              >Terms</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+              >AI Policy</a
+            >
+            <a
+              href="#"
+              class="text-[#1A1A2C] no-underline hover:text-[#5E44FF] hover:underline"
+              >Pricing</a
+            >
+          </nav>
+        </footer>
+      </div>
     </section>
-
-    <!--
-      ===== Footer =====
-      - mt-10          : margin บน 40px (เว้นจากการ์ด)
-      - flex           : เปิดใช้ Flexbox → ลูกเรียงเป็นแถวแนวนอน
-      - items-center   : จัดลูกกึ่งกลางแนวตั้ง
-      - justify-between: ดันลูกตัวแรกไปซ้ายสุด ตัวสุดท้ายไปขวาสุด
-      - text-xs        : ตัวอักษร 12px
-      - text-slate-600 : สีเทากลาง
-    -->
-    <footer class="mt-10 flex items-center justify-between text-xs text-slate-600">
-
-      <!-- ข้อความลิขสิทธิ์ (&copy; คือสัญลักษณ์ © ใน HTML) -->
-      <p>Acme productivity app &copy;2024</p>
-
-      <!--
-        เมนูลิงก์
-        - flex            : เรียงลิงก์เป็นแถวแนวนอน
-        - gap-6           : ระยะห่างระหว่างลิงก์ 24px
-        - font-semibold   : ตัวหนาปานกลาง
-        - text-slate-900  : สีเข้มกว่าข้อความลิขสิทธิ์
-      -->
-      <nav class="flex gap-6 font-semibold text-slate-900">
-        <!-- hover:underline : เมื่อเอาเมาส์ชี้ ให้ขีดเส้นใต้ -->
-        <a href="#" class="hover:underline">FAQ</a>
-        <a href="#" class="hover:underline">Terms</a>
-        <a href="#" class="hover:underline">AI Policy</a>
-        <a href="#" class="hover:underline">Pricing</a>
-      </nav>
-    </footer>
-
-  </div>
-
-</section>
+    <!-- ==================== End Section 3 ==================== -->
+  </body>
 </html>
