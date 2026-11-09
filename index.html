@@ -1,36 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev 1 - Nav Bar + Hero Section</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acme Productivity App</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Custom Design Tokens
+            'page-bg': '#F6F6FB',
+            'form-title': '#1A1A2C',
+            'input-border': '#E0E0ED',
+            'input-hover': '#B5A9FF',
+            'input-focus': '#5E44FF',
+            'btn-bg': '#1A1A2C',
+            'btn-hover': '#5F5F76',
+            'btn-focus': '#35354D',
+            'btn-ring': '#5F5F76',
+            'link-hover': '#5E44FF',
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
+<body class="bg-[#F6F6FB] font-sans text-gray-800">
 
-  <!-- Navbar -->
+  <!-- ==================== Section 1: Dev 1 (Navbar + Hero Section) ==================== -->
   <header class="max-w-7xl mx-auto px-6 py-6 flex items-center justify-between">
-    <div class="text-xl font-bold tracking-tight">Acme<span class="text-indigo-600">*</span></div>
+    <div class="text-xl font-bold tracking-tight text-slate-900">Acme<span class="text-[#5E44FF]">*</span></div>
     <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-600">
-      <a href="#" class="text-indigo-600">Home</a>
-      <a href="#" class="hover:text-gray-900">Features</a>
-      <a href="#" class="hover:text-gray-900">Pricing</a>
-      <a href="#" class="hover:text-gray-900">Contact</a>
+      <a href="#" class="text-[#5E44FF] hover:text-[#5E44FF] hover:underline transition">Home</a>
+      <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Features</a>
+      <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Pricing</a>
+      <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section class="max-w-5xl mx-auto px-6 pt-12 pb-20 text-center flex flex-col items-center">
     <!-- Rainbow Tag / Badge -->
-    <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-600 text-xs font-semibold mb-6 shadow-sm">
+    <div class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-[#5E44FF] text-xs font-semibold mb-6 shadow-sm">
       <span>🌈</span>
       <span>Acme Productivity App</span>
     </div>
 
     <!-- Main Heading -->
-    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-gray-900 mb-4">
-      Boost Your <span class="text-indigo-600">Productivity</span>
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-[#1A1A2C] mb-4">
+      Boost Your <span class="text-[#5E44FF]">Productivity</span>
     </h1>
     
     <!-- Subtitle -->
@@ -38,281 +59,114 @@
       Streamline your workflow with our all-in-one productivity app.
     </p>
     
-    <!-- CTA Button -->
-    <a href="#" class="inline-block bg-gray-900 text-white font-medium px-6 py-3 rounded-lg hover:bg-gray-800 transition">
+    <!-- CTA Button (w-[187px], py-4, px-9, rounded-2xl, Design Tokens applied) -->
+    <a href="#" class="inline-flex items-center justify-center w-[187px] bg-[#1A1A2C] text-white font-medium px-9 py-4 rounded-2xl hover:bg-[#5F5F76] focus:bg-[#35354D] focus:ring-4 focus:ring-[#5F5F76] focus:outline-none transition">
       Start Free Trial
     </a>
   </section>
 
-</body>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acme App</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="bg-white">
-    <!-- ==================== Section 1 ==================== -->
-    <!-- TODO: Section 1 - รอเพื่อนในกลุ่มทำส่วนนี้ -->
+  <!-- ==================== Section 2: Feature Section ==================== -->
+  <section class="px-4 py-12 sm:px-6 md:px-10 lg:px-16">
+    <div class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-7">
+      <!-- Card 1: Streamlined Workflows -->
+      <article class="rounded-[28px] bg-[#D8E5F6] p-8 md:p-10">
+        <div class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor" class="h-6 w-6 text-[#5F48EE]">
+            <path d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">Streamlined Workflows</h3>
+        <p class="text-base leading-relaxed text-slate-500">Automate repetitive tasks and focus on high-impact work with our powerful productivity features.</p>
+      </article>
 
-    <!-- ==================== Section 2 ==================== -->
-    <section class="px-4 py-12 sm:px-6 md:px-10 lg:px-16">
-      <div
-        class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-7"
-      >
-        <!-- Card 1: Streamlined Workflows -->
-        <article class="rounded-[28px] bg-[#D8E5F6] p-8 md:p-10">
-          <div
-            class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
-          >
-            <!-- Rocket icon (Font Awesome style) -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
-              fill="currentColor"
-              class="h-6 w-6 text-[#5F48EE]"
-            >
-              <path
-                d="M156.6 384.9L125.7 354c-8.5-8.5-11.5-20.8-7.7-32.2c3-8.9 7-20.5 11.8-33.8L24 288c-8.6 0-16.6-4.6-20.9-12.1s-4.2-16.7 .2-24.1l52.5-88.5c13-21.9 36.5-35.3 61.9-35.3l82.3 0c2.4-4 4.8-7.7 7.2-11.3C289.1-4.1 411.1-8.1 483.9 5.3c11.6 2.1 20.6 11.2 22.8 22.8c13.4 72.9 9.3 194.8-111.4 276.7c-3.5 2.4-7.3 4.8-11.3 7.2v82.3c0 25.4-13.4 49-35.3 61.9l-88.5 52.5c-7.4 4.4-16.6 4.5-24.1 .2s-12.1-12.2-12.1-20.9V380.8c-14.1 4.9-26.4 8.9-35.7 11.9c-11.2 3.6-23.4 .5-31.8-7.8zM384 168a40 40 0 1 0 0-80 40 40 0 1 0 0 80z"
-              />
-            </svg>
-          </div>
-          <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">
-            Streamlined Workflows
-          </h3>
-          <p class="text-base leading-relaxed text-slate-500">
-            Automate repetitive tasks and focus on high-impact work with our
-            powerful productivity features.
-          </p>
-        </article>
+      <!-- Card 2: Blazing Fast Performance -->
+      <article class="rounded-[28px] bg-[#D9E0FC] p-8 md:p-10">
+        <div class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7 text-[#5F48EE]">
+            <path fill-rule="evenodd" d="M2.25 2.25a.75.75 0 0 0 0 1.5H3v10.5a3 3 0 0 0 3 3h1.21l-1.172 3.513a.75.75 0 0 0 1.424.474l.329-.987h8.418l.33.987a.75.75 0 0 0 1.422-.474l-1.17-3.513H18a3 3 0 0 0 3-3V3.75h.75a.75.75 0 0 0 0-1.5H2.25Zm6.54 15h6.42l.5 1.5H8.29l.5-1.5Zm8.085-8.995a.75.75 0 1 0-.75-1.299 12.81 12.81 0 0 0-3.558 3.05L11.03 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l2.47-2.47 1.617 1.618a.75.75 0 0 0 1.146-.102 11.312 11.312 0 0 1 3.612-3.321Z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">Blazing Fast Performance</h3>
+        <p class="text-base leading-relaxed text-slate-500">Experience lightning-fast performance and instant responsiveness with our cutting-edge technology.</p>
+      </article>
 
-        <!-- Card 2: Blazing Fast Performance -->
-        <article class="rounded-[28px] bg-[#D9E0FC] p-8 md:p-10">
-          <div
-            class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
-          >
-            <!-- Presentation chart line icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-7 w-7 text-[#5F48EE]"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2.25 2.25a.75.75 0 0 0 0 1.5H3v10.5a3 3 0 0 0 3 3h1.21l-1.172 3.513a.75.75 0 0 0 1.424.474l.329-.987h8.418l.33.987a.75.75 0 0 0 1.422-.474l-1.17-3.513H18a3 3 0 0 0 3-3V3.75h.75a.75.75 0 0 0 0-1.5H2.25Zm6.54 15h6.42l.5 1.5H8.29l.5-1.5Zm8.085-8.995a.75.75 0 1 0-.75-1.299 12.81 12.81 0 0 0-3.558 3.05L11.03 8.47a.75.75 0 0 0-1.06 0l-3 3a.75.75 0 1 0 1.06 1.06l2.47-2.47 1.617 1.618a.75.75 0 0 0 1.146-.102 11.312 11.312 0 0 1 3.612-3.321Z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </div>
-          <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">
-            Blazing Fast Performance
-          </h3>
-          <p class="text-base leading-relaxed text-slate-500">
-            Experience lightning-fast performance and instant responsiveness
-            with our cutting-edge technology.
-          </p>
-        </article>
+      <!-- Card 3: Intuitive Interface -->
+      <article class="rounded-[28px] bg-[#E6DCF5] p-8 md:p-10">
+        <div class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-7 w-7 text-[#5F48EE]">
+            <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8"/>
+          </svg>
+        </div>
+        <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">Intuitive Interface</h3>
+        <p class="text-base leading-relaxed text-slate-500">Our user-friendly interface makes it easy for anyone to streamline their workflow.</p>
+      </article>
+    </div>
+  </section>
 
-        <!-- Card 3: Intuitive Interface -->
-        <article class="rounded-[28px] bg-[#E6DCF5] p-8 md:p-10">
-          <div
-            class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
-          >
-            <!-- Smile icon (filled) -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              class="h-7 w-7 text-[#5F48EE]"
-            >
-              <path
-                d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16M7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5M4.285 9.567a.5.5 0 0 1 .683.183A3.5 3.5 0 0 0 8 11.5a3.5 3.5 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.5 4.5 0 0 1 8 12.5a4.5 4.5 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683M10 8c-.552 0-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5S10.552 8 10 8"
-              />
-            </svg>
-          </div>
-          <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">
-            Intuitive Interface
-          </h3>
-          <p class="text-base leading-relaxed text-slate-500">
-            Our user-friendly interface makes it easy for anyone to streamline
-            their workflow.
-          </p>
-        </article>
-      </div>
-    </section>
-    
-<section class=" bg-slate-50 font-sans text-slate-900">
-
-  <!--
-    ตัวห่อเนื้อหาทั้งหมด (container)
-    - mx-auto   : margin ซ้าย-ขวาเป็น auto → จัดกึ่งกลางหน้า
-    - max-w-5xl : กว้างสูงสุด 64rem (1024px) จอใหญ่ก็ไม่กว้างเกินนี้
-    - px-6      : padding แนวนอน 24px (กันเนื้อหาชิดขอบจอมือถือ)
-    - py-10     : padding แนวตั้ง 40px
-  -->
+  <!-- ==================== Section 3: Contact Form (Ex 2 Requirements) ==================== -->
   <div class="mx-auto max-w-5xl px-6 py-10">
-
-    <!--
-      ===== การ์ดฟอร์ม =====
-      - rounded-2xl : มุมโค้งมาก (16px)
-      - bg-white    : พื้นหลังสีขาว (ตัดกับพื้นเทาของ body)
-      - px-6        : padding ซ้าย-ขวา 24px
-      - py-12       : padding บน-ล่าง 48px
-      - shadow-sm   : เงาบางๆ ให้การ์ดดูลอยขึ้นเล็กน้อย
-    -->
-    <section class="rounded-2xl bg-white px-6 py-12 shadow-sm">
-
-      <!--
-        หัวข้อ "Get in Touch"
-        - mb-8        : margin ล่าง 32px (เว้นระยะจากฟอร์ม)
-        - text-center : จัดข้อความกึ่งกลาง
-        - text-3xl    : ขนาดตัวอักษร 30px
-        - font-bold   : ตัวหนา (font-weight: 700)
-        - text-slate-900 : สีเทาเข้ม
-      -->
-      <h1 class="mb-8 text-center text-3xl font-bold text-slate-900">
+    <!-- Form Box: bg-white, rounded-3xl -->
+    <section class="rounded-3xl bg-white px-8 py-12 shadow-sm">
+      <!-- Title: color #1A1A2C, size 5xl -->
+      <h1 class="mb-8 text-center text-5xl font-bold text-[#1A1A2C]">
         Get in Touch
       </h1>
 
-      <!--
-        ฟอร์ม
-        - mx-auto   : จัดฟอร์มให้อยู่กลางการ์ด
-        - flex      : เปิดใช้ Flexbox
-        - flex-col  : เรียงลูกจากบนลงล่าง (flex-direction: column)
-        - gap-4     : ระยะห่างระหว่างลูกแต่ละตัว 16px
-        - w-full    : กว้าง 100% ของ parent
-        - max-w-xs  : แต่ไม่เกิน 20rem (320px) → ฟอร์มจึงแคบอยู่กลางการ์ด
-      -->
-      <form class="mx-auto flex w-full max-w-xs flex-col gap-4">
-
-        <!-- ===== ช่อง Name ===== -->
+      <form class="mx-auto flex w-full max-w-[589px] flex-col gap-4">
+        <!-- Input: Name -->
         <div>
-          <!--
-            Label
-            - mb-1          : margin ล่าง 4px (ชิดช่อง input)
-            - block         : ให้เป็น block เพื่อขึ้นบรรทัดใหม่เหนือ input
-            - text-xs       : ตัวอักษร 12px
-            - text-slate-600: สีเทากลาง
-          -->
-          <label for="name" class="mb-1 block text-xs text-slate-600">Name</label>
-
-          <!--
-            Input (ใช้ชุดเดียวกันกับ Email และ Textarea)
-            - w-full                 : กว้างเต็มความกว้างของฟอร์ม
-            - rounded-lg             : มุมโค้ง 8px
-            - border                 : ใส่เส้นขอบหนา 1px
-            - border-slate-200       : สีของเส้นขอบ เทาอ่อน
-            - bg-white               : พื้นหลังขาว
-            - px-3                   : padding ซ้าย-ขวา 12px
-            - py-2                   : padding บน-ล่าง 8px
-            - text-sm                : ตัวอักษรที่พิมพ์ 14px
-            - placeholder:text-slate-400 : สีข้อความตัวอย่าง (placeholder) เทาอ่อน
-            - focus:border-slate-900 : ตอนคลิกเข้าช่อง ขอบเปลี่ยนเป็นสีเข้ม
-            - focus:outline-none     : ปิดเส้น outline เริ่มต้นของเบราว์เซอร์
-            - focus:ring-2           : ตอน focus ใส่วงแหวนรอบช่องหนา 2px
-            - focus:ring-slate-900/10: สีวงแหวน เทาเข้มโปร่งใส 10% (/10 = opacity)
-          -->
+          <label for="name" class="mb-1 block text-xs font-medium text-slate-600">Name</label>
           <input
             id="name"
             type="text"
             placeholder="John Doe"
-            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
-                   placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+            class="w-full rounded-lg border border-[#E0E0ED] bg-white p-3 text-sm placeholder:text-slate-400 hover:border-[#B5A9FF] focus:border-[#5E44FF] focus:outline-none transition"
           />
         </div>
 
-        <!-- ===== ช่อง Email ===== -->
+        <!-- Input: Email -->
         <div>
-          <!-- class ของ label เหมือนช่อง Name ด้านบน -->
-          <label for="email" class="mb-1 block text-xs text-slate-600">Email</label>
-
-          <!-- class ของ input เหมือนช่อง Name ด้านบน -->
+          <label for="email" class="mb-1 block text-xs font-medium text-slate-600">Email</label>
           <input
             id="email"
             type="email"
             placeholder="john@example.com"
-            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
-                   placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+            class="w-full rounded-lg border border-[#E0E0ED] bg-white p-3 text-sm placeholder:text-slate-400 hover:border-[#B5A9FF] focus:border-[#5E44FF] focus:outline-none transition"
           />
         </div>
 
-        <!-- ===== ช่อง Message ===== -->
+        <!-- Input: Message -->
         <div>
-          <label for="message" class="mb-1 block text-xs text-slate-600">Message</label>
-
-          <!--
-            Textarea : ใช้ class เหมือน input ทุกตัว บวกเพิ่มอีก 1 ตัว
-            - resize : อนุญาตให้ผู้ใช้ลากมุมขวาล่างเพื่อปรับขนาดได้
-            (rows="4" เป็น attribute ของ HTML กำหนดความสูงเริ่มต้น 4 บรรทัด)
-          -->
+          <label for="message" class="mb-1 block text-xs font-medium text-slate-600">Message</label>
           <textarea
             id="message"
             rows="4"
             placeholder="Your message..."
-            class="w-full resize rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
-                   placeholder:text-slate-400
-                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+            class="w-full resize rounded-lg border border-[#E0E0ED] bg-white p-3 text-sm placeholder:text-slate-400 hover:border-[#B5A9FF] focus:border-[#5E44FF] focus:outline-none transition"
           ></textarea>
         </div>
 
-        <!--
-          ===== ปุ่ม Submit =====
-          - mt-2             : margin บน 8px (เพิ่มระยะจากช่อง Message)
-          - w-full           : กว้างเต็มฟอร์ม
-          - rounded-xl       : มุมโค้ง 12px
-          - bg-slate-900     : พื้นหลังสีกรมท่า/เทาเข้ม
-          - py-3             : padding บน-ล่าง 12px (กำหนดความสูงปุ่ม)
-          - text-xs          : ตัวอักษร 12px
-          - font-semibold    : หนาปานกลาง (600)
-          - text-white       : ตัวอักษรสีขาว
-          - transition       : ให้การเปลี่ยนสี/สถานะเคลื่อนไหวนุ่มนวล
-          - hover:bg-slate-700 : เมื่อเอาเมาส์ชี้ พื้นหลังเปลี่ยนเป็นสีอ่อนลง
-        -->
+        <!-- Submit Button (w-[589px], py-4, px-9, rounded-2xl, Design Tokens) -->
         <button
           type="submit"
-          class="mt-2 w-full rounded-xl bg-slate-900 py-3 text-xs font-semibold text-white
-                 transition hover:bg-slate-700"
+          class="mt-2 w-full max-w-[589px] rounded-2xl bg-[#1A1A2C] px-9 py-4 text-sm font-semibold text-white transition hover:bg-[#5F5F76] focus:bg-[#35354D] focus:ring-4 focus:ring-[#5F5F76] focus:outline-none"
         >
           Submit
         </button>
       </form>
     </section>
 
-    <!--
-      ===== Footer =====
-      - mt-10          : margin บน 40px (เว้นจากการ์ด)
-      - flex           : เปิดใช้ Flexbox → ลูกเรียงเป็นแถวแนวนอน
-      - items-center   : จัดลูกกึ่งกลางแนวตั้ง
-      - justify-between: ดันลูกตัวแรกไปซ้ายสุด ตัวสุดท้ายไปขวาสุด
-      - text-xs        : ตัวอักษร 12px
-      - text-slate-600 : สีเทากลาง
-    -->
+    <!-- Footer Links (Hover: text #5E44FF + underline) -->
     <footer class="mt-10 flex items-center justify-between text-xs text-slate-600">
-
-      <!-- ข้อความลิขสิทธิ์ (&copy; คือสัญลักษณ์ © ใน HTML) -->
       <p>Acme productivity app &copy;2024</p>
-
-      <!--
-        เมนูลิงก์
-        - flex            : เรียงลิงก์เป็นแถวแนวนอน
-        - gap-6           : ระยะห่างระหว่างลิงก์ 24px
-        - font-semibold   : ตัวหนาปานกลาง
-        - text-slate-900  : สีเข้มกว่าข้อความลิขสิทธิ์
-      -->
       <nav class="flex gap-6 font-semibold text-slate-900">
-        <!-- hover:underline : เมื่อเอาเมาส์ชี้ ให้ขีดเส้นใต้ -->
-        <a href="#" class="hover:underline">FAQ</a>
-        <a href="#" class="hover:underline">Terms</a>
-        <a href="#" class="hover:underline">AI Policy</a>
-        <a href="#" class="hover:underline">Pricing</a>
+        <a href="#" class="hover:text-[#5E44FF] hover:underline transition">FAQ</a>
+        <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Terms</a>
+        <a href="#" class="hover:text-[#5E44FF] hover:underline transition">AI Policy</a>
+        <a href="#" class="hover:text-[#5E44FF] hover:underline transition">Pricing</a>
       </nav>
     </footer>
-
   </div>
 
-</section>
+</body>
 </html>
