@@ -1,4 +1,197 @@
 <!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get in Touch</title>
+
+  <!-- โหลด Tailwind ผ่าน CDN (เหมาะกับการเรียนรู้/ทดลอง ต้องต่ออินเทอร์เน็ต) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<!--
+  สูตรจำหน่วยของ Tailwind: เลข 1 = 0.25rem = 4px
+  เช่น p-3 = 12px, p-4 = 16px, p-6 = 24px, p-10 = 40px
+-->
+
+<!--
+  <body> : พื้นหลังและค่าเริ่มต้นของทั้งหน้า
+  - min-h-screen    : ความสูงขั้นต่ำเท่าหน้าจอ (min-height: 100vh)
+  - bg-slate-50     : สีพื้นหลังเทาอ่อนมาก
+  - font-sans       : ใช้ฟอนต์ตระกูล sans-serif
+  - text-slate-900  : สีตัวอักษรเริ่มต้น เทาเข้มเกือบดำ
+-->
+<body class="min-h-screen bg-slate-50 font-sans text-slate-900">
+
+  <!--
+    ตัวห่อเนื้อหาทั้งหมด (container)
+    - mx-auto   : margin ซ้าย-ขวาเป็น auto → จัดกึ่งกลางหน้า
+    - max-w-5xl : กว้างสูงสุด 64rem (1024px) จอใหญ่ก็ไม่กว้างเกินนี้
+    - px-6      : padding แนวนอน 24px (กันเนื้อหาชิดขอบจอมือถือ)
+    - py-10     : padding แนวตั้ง 40px
+  -->
+  <div class="mx-auto max-w-5xl px-6 py-10">
+
+    <!--
+      ===== การ์ดฟอร์ม =====
+      - rounded-2xl : มุมโค้งมาก (16px)
+      - bg-white    : พื้นหลังสีขาว (ตัดกับพื้นเทาของ body)
+      - px-6        : padding ซ้าย-ขวา 24px
+      - py-12       : padding บน-ล่าง 48px
+      - shadow-sm   : เงาบางๆ ให้การ์ดดูลอยขึ้นเล็กน้อย
+    -->
+    <section class="rounded-2xl bg-white px-6 py-12 shadow-sm">
+
+      <!--
+        หัวข้อ "Get in Touch"
+        - mb-8        : margin ล่าง 32px (เว้นระยะจากฟอร์ม)
+        - text-center : จัดข้อความกึ่งกลาง
+        - text-3xl    : ขนาดตัวอักษร 30px
+        - font-bold   : ตัวหนา (font-weight: 700)
+        - text-slate-900 : สีเทาเข้ม
+      -->
+      <h1 class="mb-8 text-center text-3xl font-bold text-slate-900">
+        Get in Touch
+      </h1>
+
+      <!--
+        ฟอร์ม
+        - mx-auto   : จัดฟอร์มให้อยู่กลางการ์ด
+        - flex      : เปิดใช้ Flexbox
+        - flex-col  : เรียงลูกจากบนลงล่าง (flex-direction: column)
+        - gap-4     : ระยะห่างระหว่างลูกแต่ละตัว 16px
+        - w-full    : กว้าง 100% ของ parent
+        - max-w-xs  : แต่ไม่เกิน 20rem (320px) → ฟอร์มจึงแคบอยู่กลางการ์ด
+      -->
+      <form class="mx-auto flex w-full max-w-xs flex-col gap-4">
+
+        <!-- ===== ช่อง Name ===== -->
+        <div>
+          <!--
+            Label
+            - mb-1          : margin ล่าง 4px (ชิดช่อง input)
+            - block         : ให้เป็น block เพื่อขึ้นบรรทัดใหม่เหนือ input
+            - text-xs       : ตัวอักษร 12px
+            - text-slate-600: สีเทากลาง
+          -->
+          <label for="name" class="mb-1 block text-xs text-slate-600">Name</label>
+
+          <!--
+            Input (ใช้ชุดเดียวกันกับ Email และ Textarea)
+            - w-full                 : กว้างเต็มความกว้างของฟอร์ม
+            - rounded-lg             : มุมโค้ง 8px
+            - border                 : ใส่เส้นขอบหนา 1px
+            - border-slate-200       : สีของเส้นขอบ เทาอ่อน
+            - bg-white               : พื้นหลังขาว
+            - px-3                   : padding ซ้าย-ขวา 12px
+            - py-2                   : padding บน-ล่าง 8px
+            - text-sm                : ตัวอักษรที่พิมพ์ 14px
+            - placeholder:text-slate-400 : สีข้อความตัวอย่าง (placeholder) เทาอ่อน
+            - focus:border-slate-900 : ตอนคลิกเข้าช่อง ขอบเปลี่ยนเป็นสีเข้ม
+            - focus:outline-none     : ปิดเส้น outline เริ่มต้นของเบราว์เซอร์
+            - focus:ring-2           : ตอน focus ใส่วงแหวนรอบช่องหนา 2px
+            - focus:ring-slate-900/10: สีวงแหวน เทาเข้มโปร่งใส 10% (/10 = opacity)
+          -->
+          <input
+            id="name"
+            type="text"
+            placeholder="John Doe"
+            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
+                   placeholder:text-slate-400
+                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+          />
+        </div>
+
+        <!-- ===== ช่อง Email ===== -->
+        <div>
+          <!-- class ของ label เหมือนช่อง Name ด้านบน -->
+          <label for="email" class="mb-1 block text-xs text-slate-600">Email</label>
+
+          <!-- class ของ input เหมือนช่อง Name ด้านบน -->
+          <input
+            id="email"
+            type="email"
+            placeholder="john@example.com"
+            class="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
+                   placeholder:text-slate-400
+                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+          />
+        </div>
+
+        <!-- ===== ช่อง Message ===== -->
+        <div>
+          <label for="message" class="mb-1 block text-xs text-slate-600">Message</label>
+
+          <!--
+            Textarea : ใช้ class เหมือน input ทุกตัว บวกเพิ่มอีก 1 ตัว
+            - resize : อนุญาตให้ผู้ใช้ลากมุมขวาล่างเพื่อปรับขนาดได้
+            (rows="4" เป็น attribute ของ HTML กำหนดความสูงเริ่มต้น 4 บรรทัด)
+          -->
+          <textarea
+            id="message"
+            rows="4"
+            placeholder="Your message..."
+            class="w-full resize rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm
+                   placeholder:text-slate-400
+                   focus:border-slate-900 focus:outline-none focus:ring-2 focus:ring-slate-900/10"
+          ></textarea>
+        </div>
+
+        <!--
+          ===== ปุ่ม Submit =====
+          - mt-2             : margin บน 8px (เพิ่มระยะจากช่อง Message)
+          - w-full           : กว้างเต็มฟอร์ม
+          - rounded-xl       : มุมโค้ง 12px
+          - bg-slate-900     : พื้นหลังสีกรมท่า/เทาเข้ม
+          - py-3             : padding บน-ล่าง 12px (กำหนดความสูงปุ่ม)
+          - text-xs          : ตัวอักษร 12px
+          - font-semibold    : หนาปานกลาง (600)
+          - text-white       : ตัวอักษรสีขาว
+          - transition       : ให้การเปลี่ยนสี/สถานะเคลื่อนไหวนุ่มนวล
+          - hover:bg-slate-700 : เมื่อเอาเมาส์ชี้ พื้นหลังเปลี่ยนเป็นสีอ่อนลง
+        -->
+        <button
+          type="submit"
+          class="mt-2 w-full rounded-xl bg-slate-900 py-3 text-xs font-semibold text-white
+                 transition hover:bg-slate-700"
+        >
+          Submit
+        </button>
+      </form>
+    </section>
+
+    <!--
+      ===== Footer =====
+      - mt-10          : margin บน 40px (เว้นจากการ์ด)
+      - flex           : เปิดใช้ Flexbox → ลูกเรียงเป็นแถวแนวนอน
+      - items-center   : จัดลูกกึ่งกลางแนวตั้ง
+      - justify-between: ดันลูกตัวแรกไปซ้ายสุด ตัวสุดท้ายไปขวาสุด
+      - text-xs        : ตัวอักษร 12px
+      - text-slate-600 : สีเทากลาง
+    -->
+    <footer class="mt-10 flex items-center justify-between text-xs text-slate-600">
+
+      <!-- ข้อความลิขสิทธิ์ (&copy; คือสัญลักษณ์ © ใน HTML) -->
+      <p>Acme productivity app &copy;2024</p>
+
+      <!--
+        เมนูลิงก์
+        - flex            : เรียงลิงก์เป็นแถวแนวนอน
+        - gap-6           : ระยะห่างระหว่างลิงก์ 24px
+        - font-semibold   : ตัวหนาปานกลาง
+        - text-slate-900  : สีเข้มกว่าข้อความลิขสิทธิ์
+      -->
+      <nav class="flex gap-6 font-semibold text-slate-900">
+        <!-- hover:underline : เมื่อเอาเมาส์ชี้ ให้ขีดเส้นใต้ -->
+        <a href="#" class="hover:underline">FAQ</a>
+        <a href="#" class="hover:underline">Terms</a>
+        <a href="#" class="hover:underline">AI Policy</a>
+        <a href="#" class="hover:underline">Pricing</a>
+      </nav>
+    </footer>
+
+  </div>
+</body>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
