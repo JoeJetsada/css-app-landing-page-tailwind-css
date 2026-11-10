@@ -57,14 +57,15 @@
     <!-- TODO: Section 1 - รอเพื่อนในกลุ่มทำส่วนนี้ -->
 
     <!-- ==================== Section 2 ==================== -->
-    <section class="px-4 py-12 sm:px-6 md:px-10 lg:px-16">
+    <!-- Mobile: viewport 375px / card 343px (padding ซ้าย-ขวาอย่างละ 16px) -->
+    <section class="mx-auto w-full max-w-[375px] px-4 py-12 md:max-w-6xl md:px-10 lg:px-16">
       <div
-        class="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-3 md:gap-7"
+        class="mx-auto flex w-full max-w-[343px] flex-col gap-4 md:max-w-none md:grid md:grid-cols-3 md:gap-7"
       >
         <!-- Card 1: Streamlined Workflows -->
-        <article class="rounded-[28px] bg-[#D8E5F6] p-8 md:p-10">
+        <article class="w-full rounded-[28px] bg-[#D8E5F6] p-6 md:p-10">
           <div
-            class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
+            class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm md:mb-8 md:h-14 md:w-14"
           >
             <!-- Rocket icon (Font Awesome style) -->
             <svg
@@ -78,8 +79,8 @@
               />
             </svg>
           </div>
-          <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">
-            Streamlined  Workflows
+          <h3 class="mb-3 text-xl font-bold tracking-tight text-slate-900 md:text-2xl">
+            Streamlined Workflows
           </h3>
           <p class="text-base leading-relaxed text-slate-500">
             Automate repetitive tasks and focus on high-impact work with our
@@ -88,9 +89,9 @@
         </article>
 
         <!-- Card 2: Blazing Fast Performance -->
-        <article class="rounded-[28px] bg-[#D9E0FC] p-8 md:p-10">
+        <article class="w-full rounded-[28px] bg-[#D9E0FC] p-6 md:p-10">
           <div
-            class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
+            class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm md:mb-8 md:h-14 md:w-14"
           >
             <!-- Presentation chart line icon -->
             <svg
@@ -106,7 +107,7 @@
               />
             </svg>
           </div>
-          <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">
+          <h3 class="mb-3 text-xl font-bold tracking-tight text-slate-900 md:text-2xl">
             Blazing Fast Performance
           </h3>
           <p class="text-base leading-relaxed text-slate-500">
@@ -116,9 +117,9 @@
         </article>
 
         <!-- Card 3: Intuitive Interface -->
-        <article class="rounded-[28px] bg-[#E6DCF5] p-8 md:p-10">
+        <article class="w-full rounded-[28px] bg-[#E6DCF5] p-6 md:p-10">
           <div
-            class="mb-8 flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm"
+            class="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-white shadow-sm md:mb-8 md:h-14 md:w-14"
           >
             <!-- Smile icon (filled) -->
             <svg
@@ -132,16 +133,17 @@
               />
             </svg>
           </div>
-          <h3 class="mb-3 text-2xl font-bold tracking-tight text-slate-900">
+          <h3 class="mb-3 text-xl font-bold tracking-tight text-slate-900 md:text-2xl">
             Intuitive Interface
           </h3>
           <p class="text-base leading-relaxed text-slate-500">
             Our user-friendly interface makes it easy for anyone to streamline
-            their workflow
+            their workflow.
           </p>
         </article>
       </div>
     </section>
+    <!-- ==================== End Section 2 ==================== -->
     
 <section>
 
